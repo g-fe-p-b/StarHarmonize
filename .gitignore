@@ -1,1 +1,5 @@
-setx OPENAI_API_KEY "your_api_key_here"
+node_modules/
+supabase/migracao-2.sql
+supabase/migracao-3.sql
+supabase/procedimentos-catalogo.sql
+supabase/schema.sql
