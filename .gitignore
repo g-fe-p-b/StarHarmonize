@@ -1,5 +1,2 @@
 node_modules/
-supabase/migracao-2.sql
-supabase/migracao-3.sql
-supabase/procedimentos-catalogo.sql
-supabase/schema.sql
+supabase/
