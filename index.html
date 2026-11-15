@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://*.supabase.co; frame-ancestors 'none'; base-uri 'none'; form-action 'self'">
+<meta name="referrer" content="no-referrer">
+<title>Entrar · Clínica Star Harmonize</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Jost:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="login">
+  <h1><img src="assets/logo.png" alt="Star Harmonize" width="320" height="260"></h1>
+  <form id="form" autocomplete="on">
+    <label for="email">E-mail</label>
+    <input id="email" type="email" required autocomplete="username">
+    <label for="senha">Senha</label>
+    <input id="senha" type="password" required minlength="8" autocomplete="current-password">
+    <p class="erro" id="erro" role="alert"></p>
+    <button type="submit" style="width:100%">Entrar</button>
+  </form>
+</main>
+<script type="module" src="js/auth.js"></script>
+</body>
+</html>

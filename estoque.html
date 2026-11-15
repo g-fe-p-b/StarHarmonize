@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://*.supabase.co; frame-ancestors 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Estoque · Clínica Star Harmonize</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Jost:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <a class="marca" href="painel.html"><img src="assets/logo-icone.png" alt="" width="44" height="44"><h1>Clínica Star Harmonize</h1></a>
+  <nav><a href="painel.html">Agenda</a><a href="estoque.html" aria-current="page">Estoque</a><a href="historico.html">Histórico</a><a href="#" id="sair">Sair</a></nav>
+</header>
+<main style="grid-template-columns:1fr">
+  <div class="resumo" id="resumo"></div>
+  <div class="grade-hist">
+    <section aria-labelledby="t-novo"><h2 id="t-novo">Novo produto</h2>
+      <form id="form">
+        <label for="nome">Nome</label><input id="nome" required maxlength="120">
+        <label for="qtd">Quantidade</label><input id="qtd" type="number" min="0" max="100000" required>
+        <label for="min">Avisar quando chegar a</label><input id="min" type="number" min="0" max="100000" value="0" required>
+        <p class="erro" id="erro" role="alert"></p>
+        <button type="submit">Adicionar produto</button>
+      </form>
+    </section>
+    <section aria-labelledby="t-lista"><h2 id="t-lista">Produtos</h2>
+      <div class="filtros">
+        <input id="busca" type="search" placeholder="Buscar produto..." aria-label="Buscar produto" style="flex:1;min-width:150px">
+        <div class="grupo">
+          <button class="sec" data-filtro="todos" aria-pressed="true">Todos</button>
+          <button class="sec" data-filtro="baixo" aria-pressed="false">Estoque baixo</button>
+        </div>
+      </div>
+      <div id="lista"></div>
+    </section>
+  </div>
+</main>
+<script type="module" src="js/estoque.js"></script>
+</body>
+</html>
