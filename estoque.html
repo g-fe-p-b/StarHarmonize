@@ -11,7 +11,7 @@
 <body>
 <header>
   <a class="marca" href="painel.html"><img src="assets/logo-icone.png" alt="" width="44" height="44"><h1>Clínica Star Harmonize</h1></a>
-  <nav><a href="painel.html">Agenda</a><a href="estoque.html" aria-current="page">Estoque</a><a href="historico.html">Histórico</a><a href="#" id="sair">Sair</a></nav>
+  <nav><a href="painel.html">Agenda</a><a href="estoque.html" aria-current="page">Estoque</a><a href="historico.html">Histórico</a><a href="financeiro.html">Financeiro</a><a href="#" id="sair">Sair</a></nav>
 </header>
 <main style="grid-template-columns:1fr">
   <div class="resumo" id="resumo"></div>
@@ -19,6 +19,7 @@
     <section aria-labelledby="t-novo"><h2 id="t-novo">Novo produto</h2>
       <form id="form">
         <label for="nome">Nome</label><input id="nome" required maxlength="120">
+        <label for="medidaBase">Medida base</label><input id="medidaBase" required maxlength="50">
         <label for="qtd">Quantidade</label><input id="qtd" type="number" min="0" max="100000" required>
         <label for="min">Avisar quando chegar a</label><input id="min" type="number" min="0" max="100000" value="0" required>
         <p class="erro" id="erro" role="alert"></p>

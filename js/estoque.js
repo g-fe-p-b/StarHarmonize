@@ -79,6 +79,7 @@ $("form").addEventListener("submit", async (e) => {
   const { error } = await db.from("produtos").insert({
     nome: $("nome").value.trim(),
     quantidade: Number($("qtd").value),
+    medida_base: $("medidaBase").value.trim(),
     minimo: Number($("min").value),
   });
   if (error) { $("erro").textContent = "Não foi possível salvar. Confira os dados."; return; }

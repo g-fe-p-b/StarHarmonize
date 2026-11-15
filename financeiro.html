@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://*.supabase.co; frame-ancestors 'none'; base-uri 'none'; form-action 'none'">
+    <meta name="referrer" content="no-referrer">
+    <title>Financeiro · Clínica Star Harmonize</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Jost:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a class="marca" href="painel.html"><img src="assets/logo-icone.png" alt="" width="44" height="44"><h1>Clínica Star Harmonize</h1></a>
+        <nav><a href="painel.html">Agenda</a><a href="estoque.html">Estoque</a><a href="historico.html">Histórico</a><a href="financeiro.html" aria-current="page">Financeiro</a><a href="#" id="sair">Sair</a></nav>
+    </header>
+    <main>
+        <section aria-labelledby="t-f"><h2 id="t-f">Período</h2>
+            <div class="filtros">
+                <div class="grupo">
+                    <button class="sec" data-modo="dia" aria-pressed="false">Dia</button>
+                    <button class="sec" data-modo="semana" aria-pressed="false">Semana</button>
+                    <button class="sec" data-modo="mes" aria-pressed="true">Mês</button>
+                </div>
+                <div class="grupo">
+                    <button class="sec" id="ant" aria-label="Período anterior">‹</button>
+                    <button class="sec" id="hoje">Hoje</button>
+                    <button class="sec" id="prox" aria-label="Próximo período">›</button>
+                </div>
+                <strong id="rotulo"></strong>
+            </div>
+            <div class="resumo" id="resumo"></div>
+    </main>
+    <script type="module" src="js/financeiro.js"></script>
+</body>
+</html>
